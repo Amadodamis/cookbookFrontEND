@@ -1,6 +1,17 @@
 import trashIcon from "../../../img/trash.png"
 
-export default function Apto({ filtroApto }) {
+import { busquedaApto } from "../../../JS/busquedaPorIconFunction"
+
+export default function Apto({ filtroApto, busquedas, setBusqueda }) {
+
+
+    const eliminarApto = (e) => {
+        
+        let icon = e.target.name
+        busquedaApto(icon, busquedas, setBusqueda)
+    }
+
+
     return (
         <div className='filter-sector'>
 
@@ -13,7 +24,7 @@ export default function Apto({ filtroApto }) {
 
                     <div className='box-filter' key={i}>
                         <span>{apto}</span>
-                        <img src={trashIcon} alt={''} className='icon-trash' />
+                        <img src={trashIcon} alt={''} className='icon-trash' name={apto} onClick={eliminarApto} />
                     </div>
                 ))
             }

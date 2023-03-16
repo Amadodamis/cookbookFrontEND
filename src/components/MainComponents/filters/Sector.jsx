@@ -1,9 +1,13 @@
 
 import trashIcon from "../../../img/trash.png"
+import { busquedaSector } from "../../../JS/busquedaPorIconFunction"
 
-export default function Sector({ filtroSector }) {
 
-    
+export default function Sector({ filtroSector, busquedas, setBusqueda }) {
+
+    const eliminarBusqueda = () => {
+        busquedaSector(filtroSector, busquedas, setBusqueda)
+    }
 
     return (
         <div className='filter-sector'>
@@ -15,15 +19,10 @@ export default function Sector({ filtroSector }) {
 
                 <div className='box-filter'>
                     <span>{filtroSector}</span>
-                    <img src={trashIcon} alt={''} className='icon-trash' />
+                    <img src={trashIcon} alt={''} className='icon-trash' onClick={eliminarBusqueda} />
                 </div>
 
             }
-
-
-
-
-
 
         </div>
     )

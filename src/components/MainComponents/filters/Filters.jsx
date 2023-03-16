@@ -1,15 +1,13 @@
 
 import "./filters.css"
-import { useEffect } from "react";
 
 
 import Apto from "./Apto";
 import Sector from "./Sector";
 import IngredientesFilter from "./IngredientesFilter";
 
-//import eliminarbusquedaFunction from "../../../JS/eliminarbusquedaFunction"
 
-export default function Filters({ busquedas}) {
+export default function Filters({ busquedas, setBusqueda }) {
 
 
     return (
@@ -17,15 +15,18 @@ export default function Filters({ busquedas}) {
 
             <Sector
                 filtroSector={busquedas.busquedasSector}
-                
+                busquedas={busquedas} setBusqueda={setBusqueda}
+
             />
             <Apto
                 filtroApto={busquedas.busquedasApto}
+                busquedas={busquedas} setBusqueda={setBusqueda}
             />
 
 
             <IngredientesFilter
                 filtroIngredientes={busquedas.busquedasIngredientes}
+                busquedas={busquedas} setBusqueda={setBusqueda}
             />
 
         </div>

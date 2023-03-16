@@ -1,6 +1,6 @@
 import "../index.css"
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Outlet } from "react-router-dom"
 
 import busquedaModel from "../JS/busquedaModel"
@@ -14,10 +14,6 @@ export default function Root() {
     const [busquedas, setBusqueda] = useState(busquedaModel)
     const [dataFiltrada, setDataFiltrada] = useState([])
 
-    useEffect(() => {
-        console.log("cambio busquedas")
-    }, [busquedas])
-    
 
     return (
         <div className="App">

@@ -28,7 +28,7 @@ function busquedaApto(icon, busquedas, setBusqueda) {
 
     let apto = [...busquedas.busquedasApto]
 
-    
+
 
     if (apto.includes(icon)) {
 
@@ -38,7 +38,7 @@ function busquedaApto(icon, busquedas, setBusqueda) {
             ...prevState,
             ["busquedasApto"]: [...nuevoApto]
         }))
-    } 
+    }
     else {
         setBusqueda(prevState => ({
             ...prevState,
@@ -49,4 +49,17 @@ function busquedaApto(icon, busquedas, setBusqueda) {
 
 }
 
-export { busquedaApto, busquedaSector }
+function eliminarIngredienteFilter(ingredienteAeliminar, busquedas, setBusqueda) {
+
+    let nuevoArrayIngredientes = busquedas.busquedasIngredientes.filter(ingrediente => ingrediente !== ingredienteAeliminar)
+    setBusqueda(prevState => ({
+        ...prevState,
+        ["busquedasIngredientes"]: [...nuevoArrayIngredientes]
+    }))
+
+
+
+}
+
+
+export { busquedaApto, busquedaSector, eliminarIngredienteFilter }
