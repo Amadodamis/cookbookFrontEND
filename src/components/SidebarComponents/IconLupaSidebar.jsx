@@ -31,11 +31,10 @@ function IconLupaSidebar(props) {
         <SvgInput />
 
         <form onSubmit={handleSubmit} >
-          <input name="busqueda" placeholder="Search" type="text" className="input-sidebar" onChange={handleChange} />
+          <input name="busqueda" placeholder="Buscar por ingredientes..." type="text" className="input-sidebar" onChange={handleChange} />
         </form>
 
       </div>
-
     </li>
 
   )

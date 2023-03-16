@@ -1,5 +1,5 @@
 import { useState } from "react"
-import '../stylesMain/accordion.css'
+import './accordion.css'
 
 import ContentAccordion from "./ContentAccordion"
 import TitleAccordion from "./TitleAccordion"

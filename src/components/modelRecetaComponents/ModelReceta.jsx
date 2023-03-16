@@ -24,7 +24,9 @@ function ModelReceta(props) {
     return (
         <div className='model-receta'>
 
-            <IconClose/>
+            <IconClose
+                ingredientesArray={ingredientesArray} setingredientesArray={setingredientesArray}
+            />
 
             <TitleReceta placeholder={"Nombre de receta"} title={receta.receta} uRef={uRefNombre} />
 
@@ -37,14 +39,14 @@ function ModelReceta(props) {
             </section>
 
             <div className='container-ing-proc'>
-            
+
                 <IngredientesRow ingredientesArray={ingredientesArray} setingredientesArray={setingredientesArray} />
                 <Procedimiento placeholder={"Procedimiento"} procedimiento={receta.procedimiento} uRef={uRefProcedimiento} />
 
             </div>
 
             <ButtonsSave
-                
+
                 nombreButton={nombreButton}
 
             />

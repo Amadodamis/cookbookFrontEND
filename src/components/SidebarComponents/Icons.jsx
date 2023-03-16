@@ -1,10 +1,10 @@
-function IconsSideBar(props) {
+export default function Icons(props) {
     const { src, alt, name, busquedas, setBusqueda } = props
 
     const busquedaPorIcon = (e) => {
         e.preventDefault();
         let nuevaBusqueda = e.target.name;
-        nuevaBusqueda=nuevaBusqueda.toUpperCase()
+        nuevaBusqueda = nuevaBusqueda.toUpperCase()
 
         //si la busqueda esta en el array lo elimina
 
@@ -31,4 +31,3 @@ function IconsSideBar(props) {
     )
 };
 
-export default IconsSideBar;

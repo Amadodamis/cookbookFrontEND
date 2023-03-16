@@ -30,8 +30,8 @@ function EditarReceta() {
             porcionesReceta.current.value, aptoVeganoReceta.current.value, aptoCeliacoReceta.current.value,
             procedimientoReceta.current.value, ingredientesArray)
 
-        editRecipe(receta._id, nuevaReceta,dataFiltrada,setDataFiltrada)
-
+        editRecipe(receta._id, nuevaReceta, dataFiltrada, setDataFiltrada)
+        setingredientesArray([])
         navigate("/")
     }
 

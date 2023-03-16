@@ -1,10 +1,10 @@
 //import de components*******************
 import IconLupaSidebar from "./IconLupaSidebar"
-import IconsSideBar from "./IconsSideBar"
+import Icons from "./Icons"
 import dataIcons from "../../JS/iconsSideBar"
 
 
-function Ulsidebar(props) {
+export default function Ulsidebar(props) {
 
 
     const { ocultarSide, busquedas, setBusqueda } = props
@@ -22,7 +22,7 @@ function Ulsidebar(props) {
             {
                 dataIcons.map((item, i) => (
 
-                    <IconsSideBar key={i}
+                    <Icons key={i}
                         src={item.src} alt={item.alt} name={item.name}
                         busquedas={busquedas} setBusqueda={setBusqueda}
                     />
@@ -35,6 +35,3 @@ function Ulsidebar(props) {
 
     );
 }
-
-
-export default Ulsidebar;

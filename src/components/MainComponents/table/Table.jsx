@@ -3,7 +3,6 @@ import "./table.css"
 import { useLoaderData } from "react-router-dom"
 import { useEffect } from "react"
 
-import filterRecipes from "../../../JS/filterRecipes"
 import RecetaTable from "./recetaTable"
 
 
@@ -12,19 +11,20 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
 
   let allRecipes = useLoaderData()
 
-  useEffect(() => {
-    filterRecipes(busquedas, dataFiltrada, setDataFiltrada, allRecipes)
-  }, [busquedas])
-  
-  
 
+  useEffect(() => {
+    setDataFiltrada(allRecipes)
+    //filterRecipes(busquedas, dataFiltrada, setDataFiltrada, allRecipes)
+  }, [busquedas])
+
+
+  let title = <div className="thead"><h1 className="th">Recetas</h1></div>
+  let noRecipes = <p className="no-recipes-text"><i>No existen recetas</i></p>
 
   return (
     <div className="table">
 
-      <div className="thead">
-        <p className="th">Recetas</p>
-      </div>
+      {title}
 
       <div className="tbody">
 
@@ -34,19 +34,18 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
               dataFiltrada.map((item, i) => (
                 <RecetaTable key={i}
                   receta={item} i={i}
-                  dataFiltrada={dataFiltrada} setDataFiltrada={setDataFiltrada}
+                  allRecipes={dataFiltrada} setDataFiltrada={setDataFiltrada}
                   recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
-                  
+
 
                 />
               ))
             )
             :
-            (
-              <p>
-                <i>No existen recetas</i>
-              </p>
-            )}
+
+            (noRecipes)
+
+        }
 
       </div>
 

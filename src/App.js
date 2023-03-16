@@ -10,8 +10,6 @@ import {
 
 import { loader as getRecipesLoader } from "./services/getRecipes"
 import { loader as getRecipeLoader } from "./services/getRecipe"
-console.log("hola")
-
 
 const router = createBrowserRouter([
   {

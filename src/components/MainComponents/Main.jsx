@@ -1,11 +1,11 @@
-import "./stylesMain/main.css"
+import "./main.css"
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 
-import Busquedas from "./tableFiltersComponets/Busquedas";
-import Table from "./tableFiltersComponets/Table";
-import Accordion from "./accordionComponents/Accordion";
+import Filters from "./filters/Filters";
+import Table from "./table/Table";
+import Accordion from "./accordion/Accordion";
 
 function Main({ busquedas, setBusqueda, dataFiltrada, setDataFiltrada }) {
 
@@ -16,7 +16,7 @@ function Main({ busquedas, setBusqueda, dataFiltrada, setDataFiltrada }) {
     return (
         <div className="main">
             <section className="results">
-                <Busquedas
+                <Filters
                     busquedas={busquedas} setBusqueda={setBusqueda}
                 />
 

@@ -1,7 +1,9 @@
+
+import "./filters.css"
 import trashIcon from "../../../img/trash.png"
 import eliminarbusquedaFunction from "../../../JS/eliminarbusquedaFunction"
 
-function Busquedas({ busquedas, setBusqueda }) {
+function Filters({ busquedas, setBusqueda }) {
 
     const eliminarBusqueda = (e) => {
         eliminarbusquedaFunction(e.target.name, busquedas, setBusqueda)
@@ -31,4 +33,4 @@ function Busquedas({ busquedas, setBusqueda }) {
     );
 }
 
-export default Busquedas;
+export default Filters;

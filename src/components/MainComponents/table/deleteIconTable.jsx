@@ -6,7 +6,7 @@ import deleteRecipeFrontEnd from "../../../JS/deleteRecipeFrontEnd"
 export default function DeleteIconTable({ id, dataFiltrada, setDataFiltrada }) {
 
     const borrarReceta = () => {
-        if (window.confirm("Do you really want to leave?")) {
+        if (window.confirm("Desea borrar la receta?")) {
             deleteRecipe(id)
             deleteRecipeFrontEnd(id, dataFiltrada, setDataFiltrada)
         }

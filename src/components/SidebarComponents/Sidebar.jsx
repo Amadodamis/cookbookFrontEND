@@ -1,12 +1,11 @@
 import "./sidebar.css"
+import Ulsidebar from "./Ulsidebar"
+import Logo from "./Logo"
 
 import { useRef } from "react"
 
 
-import Ulsidebar from "./Ulsidebar"
-import Logo from "./Logo"
-
-function Sidebar(props) {
+export default function Sidebar(props) {
     const { busquedas, setBusqueda } = props
 
     const sidebar = useRef(null)
@@ -20,7 +19,8 @@ function Sidebar(props) {
 
         <div className="sidebar" ref={sidebar} >
 
-            <Logo ocultarSide={ocultarSide}/>
+            <Logo ocultarSide={ocultarSide} />
+
 
             <Ulsidebar
                 ocultarSide={ocultarSide}
@@ -34,4 +34,3 @@ function Sidebar(props) {
     );
 }
 
-export default Sidebar;

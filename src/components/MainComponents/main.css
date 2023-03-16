@@ -48,35 +48,3 @@
 
 }
 
-/******************************Checkboxes BUSQUEDAS********************************/
-
-
-.box-item {
-  display: flex;
-  border: 1px gray solid;
-  border-radius: 3px;
-  margin: 2px;
-  max-width: 150px;
-  height: 35px;
-  color: white;
-  font-size: 16px;
-  padding: 2px;
-  font-family: 'Montserrat', sans-serif;
-
-}
-
-.container-trash {
-  width: 20px;
-  height: 20px;
-  margin-top: 2px;
-  cursor: pointer;
-}
-
-.icon-trash {
-  width: 100%;
-  height: 100%;
-}
-
-.text-box {
-  margin: 3px;
-}

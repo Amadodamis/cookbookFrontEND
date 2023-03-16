@@ -8,7 +8,7 @@ export async function loader() {
         return recipes
     }
     catch (error) {
-        console.log(error)
+        return error
     }
 
 }

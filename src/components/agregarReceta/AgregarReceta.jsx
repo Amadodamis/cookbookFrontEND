@@ -16,7 +16,7 @@ const AgregarReceta = () => {
     const [dataFiltrada, setDataFiltrada] = useOutletContext();
     const [ingredientesArray, setingredientesArray] = useState([])
 
-    
+
     let receta = modeloReceta;
     let nombreReceta = useRef(null);
     let sectorReceta = useRef(null);
@@ -37,7 +37,7 @@ const AgregarReceta = () => {
             procedimientoReceta.current.value, ingredientesArray)
 
         createRecipe(nuevaReceta, dataFiltrada, setDataFiltrada)
-        
+        setingredientesArray([])
         navigate("/")
     }
 

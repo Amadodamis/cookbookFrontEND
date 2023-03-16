@@ -2,7 +2,8 @@ import closeIcon from "../../img/close.png"
 import { Link } from "react-router-dom"
 
 
-function IconClose() {
+
+function IconClose(ingredientesArray, setingredientesArray) {
 
 
     return (
