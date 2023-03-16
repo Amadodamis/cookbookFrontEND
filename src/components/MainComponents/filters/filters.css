@@ -1,29 +1,71 @@
-.box-item {
-    display: flex;
-    border: 1px gray solid;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+.busquedas {
+    height: 30%;
+    margin: 4px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: var(--paper)
+}
+
+
+.filter-h3 {
+    font-family: 'Tilt Warp', cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    color: var(--clr-gray500);
+    font-size: 20px;
+}
+
+
+/******************************************************/
+
+
+
+.container-filter-ingredientes {
+    
     border-radius: 3px;
+    text-align: center;
+}
+
+.cnt-flt-ingredientes{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/************************ SECTOR -- Apto*********/
+.box-filter {
+    display: flex;
+    align-items: center;
+    
+    padding:0px 4px 0px 4px;
+    border-radius: 3px;
+    border: 1px var(--dark) solid;
+    margin-right: 2px;
+
+    font-size: 18px;
+    font-family: 'Mukta', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+
+
+.filter-sector {
+    display: flex;
+    align-items: center;
     margin: 2px;
-    max-width: 150px;
-    height: 35px;
-    color: white;
-    font-size: 16px;
-    padding: 2px;
-    font-family: 'Montserrat', sans-serif;
-
+    
 }
 
-.container-trash {
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
-    cursor: pointer;
-}
 
 .icon-trash {
-    width: 100%;
-    height: 100%;
-}
-
-.text-box {
-    margin: 3px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-bottom:4px;
 }

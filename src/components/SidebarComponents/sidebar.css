@@ -1,6 +1,6 @@
-.ul-sidebar{
+.ul-sidebar {
     margin-top: 35px;
-    
+
 }
 
 .logo {
@@ -24,7 +24,7 @@
 
 .icons {
     height: 45px;
-   
+
 }
 
 .sidebar {
@@ -37,7 +37,7 @@
     background-color: #12171e;
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease;
-   
+
 }
 
 
@@ -46,16 +46,16 @@
 }
 
 
-.sidebar .top span{
-    color:#fff;
+.sidebar .top span {
+    color: #fff;
     opacity: 0;
 }
 
-.sidebar.active .top span{
+.sidebar.active .top span {
     opacity: 1;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     position: relative;
     height: 50px;
     width: 90%;
@@ -63,52 +63,52 @@
     line-height: 50px;
 }
 
-.sidebar ul li div{
-    color:#fff;
-    display:flex;
+.sidebar ul li div {
+    color: #fff;
+    display: flex;
     align-items: center;
     text-decoration: none;
     border-radius: 0.8rem;
 }
 
-.sidebar ul li div:hover{
-    background-color:#fff;
-    color:#12171e;
+.sidebar ul li div:hover {
+    background-color: #fff;
+    color: var(--dark);
 }
 
-.sidebar ul li div img{
+.sidebar ul li div img {
     border-radius: 120px;
     cursor: pointer;
 }
 
-.sidebar .nav-item{
-    opacity:0;
+.sidebar .nav-item {
+    opacity: 0;
 }
 
-.sidebar.active .nav-item{
+.sidebar.active .nav-item {
     opacity: 1;
     margin-left: 5px;
 }
 
-.sidebar ul li .tooltip{
+.sidebar ul li .tooltip {
     position: absolute;
-    left:125px;
-    top:50%;
-    transform: translate(-50%,-50%);
-    background-color:#fff;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
     box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
     border-radius: .6rem;
-    padding:.4rem 1.2rem;
+    padding: .4rem 1.2rem;
     line-height: 1.8rem;
     z-index: 20;
     opacity: 0;
 }
 
-.sidebar ul li:hover .tooltip{
-    opacity:1;
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
 }
 
-.sidebar.active ul li .tooltip{
+.sidebar.active ul li .tooltip {
     display: none;
 }
 
@@ -116,14 +116,16 @@
     display: none;
 }
 
-.sidebar.active .group{
+.sidebar.active .group {
     display: inline-flex;
 }
-.sidebar.active .icono-lupa{
+
+.sidebar.active .icono-lupa {
     display: none;
 }
-.icono-lupa{
-    cursor:pointer;
+
+.icono-lupa {
+    cursor: pointer;
 }
 
 
@@ -138,9 +140,9 @@
     align-items: center;
     position: relative;
     max-width: 220px;
-   }
-   
-   .input-sidebar {
+}
+
+.input-sidebar {
     width: 100%;
     height: 40px;
     line-height: 28px;
@@ -149,26 +151,23 @@
     border: 2px solid transparent;
     border-radius: 8px;
     outline: none;
-    background-color: #f3f3f4;
-    color: #0d0c22;
+    background-color: white;
+    color: var(--dark);
     transition: .3s ease;
-   }
-   
-   .input-sidebar:placeholder {
-    color: #9e9ea7;
-   }
-   
-   .input-sidebar:focus, .input-sidebar:hover {
+}
+
+
+.input-sidebar:focus,
+.input-sidebar:hover {
     outline: none;
-    border-color: rgba(234,76,137,0.4);
     background-color: #fff;
     box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
-   }
-   
-   .icon-input {
+}
+
+.icon-input {
     position: absolute;
     left: 1rem;
-    fill: #9e9ea7;
+    fill: var(--dark);
     width: 1rem;
     height: 1rem;
-   }
+}

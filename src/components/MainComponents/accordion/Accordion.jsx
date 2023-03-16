@@ -21,7 +21,7 @@ function Accordion({ recetasAcordion, setRecetasAcordion }) {
                         selected={selected} setSelected={setSelected} i={i}
                         recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
                         id={receta._id} nombreReceta={receta.receta}
-
+                        tipo={receta.tipo}
                     />
 
                     <ContentAccordion

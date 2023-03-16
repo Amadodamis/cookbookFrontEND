@@ -30,7 +30,7 @@
 .item {
     padding: 10px 20px;
     border-radius: 13px;
-    background: #f0ebe1;
+    background: var(--paper);
     margin-bottom: 5px;
 }
 

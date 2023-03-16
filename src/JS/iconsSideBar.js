@@ -1,12 +1,12 @@
 import iconCocina from "../img/cocina.png"
 import iconPasteleria from "../img/pasteleria.png"
-
 import iconPanaderia from "../img/pan.png"
+
 import iconCeliaco from "../img/celiac.png"
 import iconVegan from "../img/vegan.png"
 
 
-const dataIcons = [
+const dataIconsSector = [
     {
         src: iconCocina,
         alt: "cocina-icon",
@@ -21,8 +21,10 @@ const dataIcons = [
         src: iconPanaderia,
         alt: "icon-panaderia",
         name: "Panaderia",
-    },
-   
+    }
+]
+
+const dataIconsApto = [
     {
         src: iconVegan,
         alt: "icon-vegan",
@@ -33,9 +35,8 @@ const dataIcons = [
         alt: "icon-celiaco",
         name: "Celiaco",
     },
-
-
 ]
 
 
-export default dataIcons
+
+export  { dataIconsSector, dataIconsApto }

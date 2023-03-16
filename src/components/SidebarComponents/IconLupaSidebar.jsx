@@ -9,17 +9,18 @@ function IconLupaSidebar(props) {
 
   const { ocultarSide, busquedas, setBusqueda } = props
 
-  const [nuevaBusqueda, setNuevaBusqueda] = useState("")
+  const [nuevaBusquedaIngrediente, setNuevaBusquedaIngrediente] = useState("")
 
   const handleChange = (e) => {
-    const busqueda = e.target.value;
-    setNuevaBusqueda(busqueda)
+    const nuevoIngrediente = e.target.value;
+    setNuevaBusquedaIngrediente(nuevoIngrediente)
   }
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
 
-    addbusqueda(busquedas, setBusqueda, nuevaBusqueda)
+    addbusqueda(busquedas,setBusqueda, nuevaBusquedaIngrediente)
   }
 
 

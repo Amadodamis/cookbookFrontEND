@@ -1,22 +1,11 @@
+
+
 export default function Icons(props) {
-    const { src, alt, name, busquedas, setBusqueda } = props
+    const { src, alt, name, busquedas, setBusqueda, functionBusqueda } = props
 
     const busquedaPorIcon = (e) => {
-        e.preventDefault();
-        let nuevaBusqueda = e.target.name;
-        nuevaBusqueda = nuevaBusqueda.toUpperCase()
-
-        //si la busqueda esta en el array lo elimina
-
-        if (busquedas.includes(nuevaBusqueda)) {
-            let nuevoArray = busquedas.filter(busq => busq !== nuevaBusqueda)
-            setBusqueda(nuevoArray)
-        }
-        // si la busqueda no esta en el array lo agrega
-        else {
-            setBusqueda([...busquedas, nuevaBusqueda])
-        }
-
+        let icon = e.target.name.toUpperCase();
+        functionBusqueda(icon, busquedas, setBusqueda)
     }
 
 

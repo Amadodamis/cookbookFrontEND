@@ -11,12 +11,12 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
 
   let allRecipes = useLoaderData()
 
-
-  useEffect(() => {
-    setDataFiltrada(allRecipes)
-    //filterRecipes(busquedas, dataFiltrada, setDataFiltrada, allRecipes)
-  }, [busquedas])
-
+  
+    useEffect(() => {
+      setDataFiltrada(allRecipes)
+      //filterRecipes(busquedas, dataFiltrada, setDataFiltrada, allRecipes)
+    }, [])
+  
 
   let title = <div className="thead"><h1 className="th">Recetas</h1></div>
   let noRecipes = <p className="no-recipes-text"><i>No existen recetas</i></p>

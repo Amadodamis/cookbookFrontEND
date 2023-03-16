@@ -1,36 +1,33 @@
 
 import "./filters.css"
-import trashIcon from "../../../img/trash.png"
-import eliminarbusquedaFunction from "../../../JS/eliminarbusquedaFunction"
+import { useEffect } from "react";
 
-function Filters({ busquedas, setBusqueda }) {
 
-    const eliminarBusqueda = (e) => {
-        eliminarbusquedaFunction(e.target.name, busquedas, setBusqueda)
-    }
+import Apto from "./Apto";
+import Sector from "./Sector";
+import IngredientesFilter from "./IngredientesFilter";
+
+//import eliminarbusquedaFunction from "../../../JS/eliminarbusquedaFunction"
+
+export default function Filters({ busquedas}) {
+
 
     return (
         <div className="busquedas">
-            {busquedas.length ?
-                (
-                    busquedas.map((item, i) => (
-                        <div className="box-item" key={i} >
-                            <p className="text-box">{item}</p>
-                            <div className="container-trash">
-                                <img className="icon-trash" src={trashIcon} alt={"trash-icono"} name={item} onClick={eliminarBusqueda} />
-                            </div>
-                        </div>
-                    ))
-                )
-                :
-                (
-                    <div className="box-item"  >
-                        <p className="text-box">Sin filtros</p>
-                    </div>
-                )
-            }
+
+            <Sector
+                filtroSector={busquedas.busquedasSector}
+                
+            />
+            <Apto
+                filtroApto={busquedas.busquedasApto}
+            />
+
+
+            <IngredientesFilter
+                filtroIngredientes={busquedas.busquedasIngredientes}
+            />
+
         </div>
     );
 }
-
-export default Filters;

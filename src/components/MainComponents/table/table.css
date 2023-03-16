@@ -31,14 +31,14 @@
   border-radius: 3px;
   font-family: 'Mukta', sans-serif;
   color: var(--clr-gray500);
-  background-color: var(--clr-gray100);
+  background-color: var(--paper);
   overflow: hidden;
-  width: 98%;
+  
   margin: 4px;
   height: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
 }
 
 .thead {

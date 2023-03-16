@@ -2,7 +2,7 @@ import "./sidebar.css"
 import Ulsidebar from "./Ulsidebar"
 import Logo from "./Logo"
 
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 
 
 export default function Sidebar(props) {
@@ -13,6 +13,7 @@ export default function Sidebar(props) {
     const ocultarSide = () => {
         sidebar.current.classList.toggle("active")
     }
+
 
 
     return (
