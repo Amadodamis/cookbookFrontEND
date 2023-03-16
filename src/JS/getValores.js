@@ -5,7 +5,7 @@ function getValores(nombre, sector, tipo, porciones, aptoV, aptoC, procedimiento
     }
 
     let nuevaReceta = {
-        receta: nombre,
+        receta: nombre.toUpperCase(),
         sector: sector,
         tipo: tipo,
         porciones: porc,

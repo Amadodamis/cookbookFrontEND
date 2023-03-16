@@ -2,7 +2,7 @@ function validacionNuevoIngrediente(nIngrediente, cant, uni) {
     let nuevoIngrediente
     if (nIngrediente !== "" && cant >= 0) {
         nuevoIngrediente = {
-            ingrediente: nIngrediente,
+            ingrediente: nIngrediente.toUpperCase(),
             cantidad: cant,
             unidad: uni,
         }
