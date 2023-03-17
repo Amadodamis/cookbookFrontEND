@@ -1,14 +1,9 @@
 
 import { Link } from "react-router-dom"
-import { deleteAcordion } from "../../../JS/acordionFunctions"
-
 import editIcon from "../../../img/edit.png"
-import removeIcon from "../../../img/remove.png"
+import closeIcon from "../../../img/close.png"
 
 function AccordionIcons({ id }) {
-
-
-
 
     return (
         <div className='container-accordion-icons'>
@@ -17,6 +12,10 @@ function AccordionIcons({ id }) {
                 <Link to={`edit/${id}`}>
                     <img src={editIcon} alt={'icon-trash'} className={'trash-icon-accordion'} />
                 </Link>
+            </div>
+
+            <div className='container-accordion-icon'>
+                <img src={closeIcon} alt={'icon-trash'} className={'trash-icon-accordion'} />
             </div>
 
         </div>

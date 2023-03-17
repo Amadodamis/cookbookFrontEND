@@ -6,22 +6,22 @@ import { deleteAcordion, estaFunction, addAcordion } from "../../../JS/acordionF
 import DeleteIconTable from "./deleteIconTable"
 
 
-function RecetaTable({ i, receta, recetasAcordion, setRecetasAcordion,  setUpdateDataFiltrada }) {
+function RecetaTable({ i, receta, recetasAcordion, setRecetasAcordion, setUpdateDataFiltrada }) {
 
 
 
     const text = useRef(null)
 
     const agregarRecetaAcordion = (e) => {
-
-
-        let estaLaReceta = estaFunction(recetasAcordion, receta.receta)
-
-        estaLaReceta ?
-            deleteAcordion(receta, recetasAcordion, setRecetasAcordion, text)
-            :
-            addAcordion(receta, recetasAcordion, setRecetasAcordion, text)
-
+        /*
+        
+                let estaLaReceta = estaFunction(recetasAcordion, receta.receta)
+        
+                estaLaReceta ?
+                    deleteAcordion(receta, recetasAcordion, setRecetasAcordion, text)
+                    :
+                    addAcordion(receta, recetasAcordion, setRecetasAcordion, text)
+        */
     }
 
 

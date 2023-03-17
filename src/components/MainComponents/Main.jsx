@@ -7,7 +7,7 @@ import Filters from "./filters/Filters";
 import Table from "./table/Table";
 import Accordion from "./accordion/Accordion";
 
-function Main({ busquedas, setBusqueda, dataFiltrada, setDataFiltrada, updateDataFiltrada, setUpdateDataFiltrada }) {
+export default function Main({ busquedas, setBusqueda, dataFiltrada, setDataFiltrada, updateDataFiltrada, setUpdateDataFiltrada }) {
 
     const [recetasAcordion, setRecetasAcordion] = useState([])
 
@@ -42,8 +42,3 @@ function Main({ busquedas, setBusqueda, dataFiltrada, setDataFiltrada, updateDat
 
     );
 }
-
-
-
-
-export default Main;
