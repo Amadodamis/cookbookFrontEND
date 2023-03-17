@@ -1,9 +1,9 @@
-import iconCocina from "../img/cocina.png"
-import iconPasteleria from "../img/pasteleria.png"
-import iconPanaderia from "../img/pan.png"
+import iconCocina from "../../img/cocina.png"
+import iconPasteleria from "../../img/pasteleria.png"
+import iconPanaderia from "../../img/pan.png"
 
-import iconCeliaco from "../img/celiac.png"
-import iconVegan from "../img/vegan.png"
+import iconCeliaco from "../../img/celiac.png"
+import iconVegan from "../../img/vegan.png"
 
 
 const dataIconsSector = [

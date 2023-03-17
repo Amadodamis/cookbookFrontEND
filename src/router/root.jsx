@@ -3,7 +3,7 @@ import "../index.css"
 import { useState } from 'react'
 import { Outlet } from "react-router-dom"
 
-import busquedaModel from "../JS/busquedaModel"
+import busquedaModelOBJ from "../JS/models/busquedaModel"
 import Sidebar from '../components/SidebarComponents/Sidebar'
 import Main from '../components/MainComponents/Main'
 import AddRecipeButton from '../components/buttonAddRecipe/AddRecipeButton'
@@ -11,7 +11,7 @@ import AddRecipeButton from '../components/buttonAddRecipe/AddRecipeButton'
 
 export default function Root() {
 
-    const [busquedas, setBusqueda] = useState(busquedaModel)
+    const [busquedas, setBusqueda] = useState(busquedaModelOBJ)
     const [dataFiltrada, setDataFiltrada] = useState([])
 
 

@@ -2,7 +2,7 @@
 import IconLupaSidebar from "./IconLupaSidebar"
 import Icons from "./Icons"
 
-import { dataIconsSector, dataIconsApto } from "../../JS/iconsSideBar"
+import { dataIconsSector, dataIconsApto } from "../../JS/models/iconsSideBarModel"
 import { busquedaApto, busquedaSector } from "../../JS/busquedaPorIconFunction"
 
 export default function Ulsidebar({ ocultarSide, busquedas, setBusqueda }) {

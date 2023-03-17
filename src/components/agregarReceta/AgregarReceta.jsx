@@ -6,7 +6,7 @@ import { useState, useRef } from "react"
 
 
 import ModelReceta from "../modelRecetaComponents/ModelReceta"
-import modeloReceta from "../../JS/modeloReceta"
+import modeloRecetaOBJ from "../../JS/models/modeloReceta"
 import getValores from "../../JS/getValores"
 import createRecipe from "../../services/createRecipe";
 
@@ -17,7 +17,7 @@ const AgregarReceta = () => {
     const [ingredientesArray, setingredientesArray] = useState([])
 
 
-    let receta = modeloReceta;
+    let receta = modeloRecetaOBJ;
     let nombreReceta = useRef(null);
     let sectorReceta = useRef(null);
     let tipoReceta = useRef(null);

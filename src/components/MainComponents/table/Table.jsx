@@ -12,12 +12,10 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
 
   useEffect(() => {
 
-    if (busquedas.busquedasIngredientes.length < 1 && busquedas.busquedasSector == "" && busquedas.busquedasApto.length < 1) {
-      console.log("all recipes")
+    if (busquedas.busquedasIngredientes.length < 1 && busquedas.busquedasSector === "" && busquedas.busquedasApto.length < 1) {
       setDataFiltrada(allRecipes)
     }
     else {
-      console.log("filtradas")
       let nuevaData = getRecipesFiltered(busquedas)
       nuevaData.then(
         (recetas) => {
