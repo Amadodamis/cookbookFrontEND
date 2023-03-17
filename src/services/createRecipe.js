@@ -7,7 +7,7 @@ export default function createRecipe(nuevaReceta, dataFiltrada, setDataFiltrada)
         .then(res => {
             console.log(res.data)
             //frontend
-            setDataFiltrada([...dataFiltrada,res.data])
+            //setDataFiltrada([...dataFiltrada,res.data])
         }
 
         )

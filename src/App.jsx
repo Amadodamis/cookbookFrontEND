@@ -8,7 +8,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { loader as getRecipesLoader } from "./services/getRecipes"
 import { loader as getRecipeLoader } from "./services/getRecipe"
 
 const router = createBrowserRouter([
@@ -16,7 +15,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    loader: getRecipesLoader,
     children: [
       {
         path: "add",

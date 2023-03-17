@@ -1,29 +1,27 @@
 import "./table.css"
 
-import { useLoaderData } from "react-router-dom"
-import { useEffect } from "react"
+
+import { useEffect, useState } from "react"
 import RecetaTable from "./recetaTable"
-import { getRecipesFiltered } from "../../../services/getRecipesFiltered"
+import setDataFiltradaFunction from "../../../JS/setDataFiltradaFunction"
 
 function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, setDataFiltrada }) {
 
-  const allRecipes = useLoaderData()
+
+  const [elementoEliminado, setElementoEliminado] = useState(false)
+
+  useEffect(() => {
+    setDataFiltradaFunction(busquedas, setDataFiltrada)
+  }, [busquedas])
 
 
   useEffect(() => {
-
-    if (busquedas.busquedasIngredientes.length < 1 && busquedas.busquedasSector === "" && busquedas.busquedasApto.length < 1) {
-      setDataFiltrada(allRecipes)
+    if (elementoEliminado === true) {
+      setDataFiltradaFunction(busquedas, setDataFiltrada)
+      setElementoEliminado(false)
     }
-    else {
-      let nuevaData = getRecipesFiltered(busquedas)
-      nuevaData.then(
-        (recetas) => {
-          setDataFiltrada(recetas)
-        })
+  }, [elementoEliminado])
 
-    }
-  }, [busquedas])
 
 
   let title = <div className="thead"><h1 className="th">Recetas</h1></div>
@@ -42,10 +40,8 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
               dataFiltrada.map((item, i) => (
                 <RecetaTable key={i}
                   receta={item} i={i}
-                  allRecipes={dataFiltrada} setDataFiltrada={setDataFiltrada}
+                  setElementoEliminado={setElementoEliminado}
                   recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
-
-
                 />
               ))
             )
