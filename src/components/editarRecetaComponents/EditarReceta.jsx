@@ -11,7 +11,7 @@ function EditarReceta() {
     const navigate = useNavigate()
 
     const receta = useLoaderData();
-    const [dataFiltrada, setDataFiltrada] = useOutletContext();
+    const [updateDataFiltrada, setUpdateDataFiltrada] = useOutletContext();
     const [ingredientesArray, setingredientesArray] = useState([...receta.ingredientes])
 
     let nombreReceta = useRef(receta.receta);
@@ -30,7 +30,7 @@ function EditarReceta() {
             porcionesReceta.current.value, aptoVeganoReceta.current.value, aptoCeliacoReceta.current.value,
             procedimientoReceta.current.value, ingredientesArray)
 
-        editRecipe(receta._id, nuevaReceta, dataFiltrada, setDataFiltrada)
+        editRecipe(receta._id, nuevaReceta, updateDataFiltrada, setUpdateDataFiltrada)
         setingredientesArray([])
         navigate("/")
     }

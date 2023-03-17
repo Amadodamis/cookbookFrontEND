@@ -13,13 +13,13 @@ export default function Root() {
 
     const [busquedas, setBusqueda] = useState(busquedaModelOBJ)
     const [dataFiltrada, setDataFiltrada] = useState([])
-
+    const [updateDataFiltrada, setUpdateDataFiltrada] = useState(false)
 
     return (
         <div className="App">
 
             <Outlet
-                context={[dataFiltrada, setDataFiltrada]}
+                context={[updateDataFiltrada, setUpdateDataFiltrada]}
             />
             <AddRecipeButton />
 
@@ -29,6 +29,7 @@ export default function Root() {
             <Main
                 busquedas={busquedas} setBusqueda={setBusqueda}
                 dataFiltrada={dataFiltrada} setDataFiltrada={setDataFiltrada}
+                updateDataFiltrada={updateDataFiltrada} setUpdateDataFiltrada={setUpdateDataFiltrada}
 
             />
 

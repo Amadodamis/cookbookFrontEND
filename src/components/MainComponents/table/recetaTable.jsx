@@ -6,7 +6,7 @@ import { deleteAcordion, estaFunction, addAcordion } from "../../../JS/acordionF
 import DeleteIconTable from "./deleteIconTable"
 
 
-function RecetaTable({ i, receta, recetasAcordion, setRecetasAcordion, dataFiltrada, setDataFiltrada, elementoEliminado, setElementoEliminado }) {
+function RecetaTable({ i, receta, recetasAcordion, setRecetasAcordion,  setUpdateDataFiltrada }) {
 
 
 
@@ -36,7 +36,7 @@ function RecetaTable({ i, receta, recetasAcordion, setRecetasAcordion, dataFiltr
                 </p>
 
                 <DeleteIconTable
-                    id={receta._id} setElementoEliminado={setElementoEliminado}
+                    id={receta._id} setUpdateDataFiltrada={setUpdateDataFiltrada}
                 />
 
             </div>

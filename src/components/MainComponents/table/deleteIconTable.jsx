@@ -1,13 +1,13 @@
 import deleteRecipe from '../../../services/deleteRecipe'
 import deleteIcon from "../../../img/trash.png"
 
-export default function DeleteIconTable({ id, setElementoEliminado }) {
+export default function DeleteIconTable({ id, setUpdateDataFiltrada }) {
 
     const borrarReceta = () => {
 
         if (window.confirm("Desea borrar la receta?")) {
             deleteRecipe(id)
-            setElementoEliminado(true)
+            setUpdateDataFiltrada(true)
         }
 
     }

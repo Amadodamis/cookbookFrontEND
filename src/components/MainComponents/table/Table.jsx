@@ -5,10 +5,9 @@ import { useEffect, useState } from "react"
 import RecetaTable from "./recetaTable"
 import setDataFiltradaFunction from "../../../JS/setDataFiltradaFunction"
 
-function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, setDataFiltrada }) {
+function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, setDataFiltrada, updateDataFiltrada, setUpdateDataFiltrada }) {
 
 
-  const [elementoEliminado, setElementoEliminado] = useState(false)
 
   useEffect(() => {
     setDataFiltradaFunction(busquedas, setDataFiltrada)
@@ -16,11 +15,11 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
 
 
   useEffect(() => {
-    if (elementoEliminado === true) {
+    if (updateDataFiltrada === true) {
       setDataFiltradaFunction(busquedas, setDataFiltrada)
-      setElementoEliminado(false)
+      setUpdateDataFiltrada(false)
     }
-  }, [elementoEliminado])
+  }, [updateDataFiltrada])
 
 
 
@@ -40,7 +39,7 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
               dataFiltrada.map((item, i) => (
                 <RecetaTable key={i}
                   receta={item} i={i}
-                  setElementoEliminado={setElementoEliminado}
+                  setUpdateDataFiltrada={setUpdateDataFiltrada}
                   recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
                 />
               ))

@@ -13,7 +13,7 @@ import createRecipe from "../../services/createRecipe";
 
 const AgregarReceta = () => {
     const navigate = useNavigate()
-    const [dataFiltrada, setDataFiltrada] = useOutletContext();
+    const [updateDataFiltrada, setUpdateDataFiltrada] = useOutletContext();
     const [ingredientesArray, setingredientesArray] = useState([])
 
 
@@ -36,7 +36,7 @@ const AgregarReceta = () => {
             porcionesReceta.current.value, aptoVeganoReceta.current.value, aptoCeliacoReceta.current.value,
             procedimientoReceta.current.value, ingredientesArray)
 
-        createRecipe(nuevaReceta, dataFiltrada, setDataFiltrada)
+        createRecipe(nuevaReceta, updateDataFiltrada, setUpdateDataFiltrada)
         setingredientesArray([])
         navigate("/")
     }
