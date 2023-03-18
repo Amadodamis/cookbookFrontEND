@@ -1,42 +1,25 @@
-
-import { useRef } from "react"
-
-import { deleteAcordion, estaFunction, addAcordion } from "../../../JS/acordionFunctions"
-
+import { addDeleteAccordion } from "../../../JS/acordionFunctions"
 import DeleteIconTable from "./deleteIconTable"
+import styleTable from "../../../JS/styleRecetaTable"
 
+function RecetaTable({ i, nombreReceta, id, recetasAcordion, setRecetasAcordion, setUpdateDataFiltrada }) {
 
-function RecetaTable({ i, receta, recetasAcordion, setRecetasAcordion, setUpdateDataFiltrada }) {
-
-
-
-    const text = useRef(null)
-
-    const agregarRecetaAcordion = (e) => {
-        /*
-        
-                let estaLaReceta = estaFunction(recetasAcordion, receta.receta)
-        
-                estaLaReceta ?
-                    deleteAcordion(receta, recetasAcordion, setRecetasAcordion, text)
-                    :
-                    addAcordion(receta, recetasAcordion, setRecetasAcordion, text)
-        */
+    const agregarRecetaAcordion = () => {
+        addDeleteAccordion(recetasAcordion, setRecetasAcordion, id)
     }
-
 
     return (
         <div className="tr-table">
             <div className="td">
 
-                <p className="text-table-recetas" onClick={agregarRecetaAcordion} ref={text}>
+                <p className={styleTable(recetasAcordion,id)} onClick={agregarRecetaAcordion} >
                     {
-                        `${i + 1}) ${receta.receta}`
+                        `${i + 1}) ${nombreReceta}`
                     }
                 </p>
 
                 <DeleteIconTable
-                    id={receta._id} setUpdateDataFiltrada={setUpdateDataFiltrada}
+                    id={id} setUpdateDataFiltrada={setUpdateDataFiltrada}
                 />
 
             </div>
@@ -45,12 +28,3 @@ function RecetaTable({ i, receta, recetasAcordion, setRecetasAcordion, setUpdate
 }
 
 export default RecetaTable
-
-
-/*
-
-
-
-
-
-*/

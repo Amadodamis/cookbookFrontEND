@@ -12,7 +12,6 @@ export default function Main({ busquedas, setBusqueda, dataFiltrada, setDataFilt
     const [recetasAcordion, setRecetasAcordion] = useState([])
 
 
-
     return (
         <div className="main">
             <section className="results">
@@ -22,13 +21,16 @@ export default function Main({ busquedas, setBusqueda, dataFiltrada, setDataFilt
 
                 <Table
                     busquedas={busquedas}
-                    recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
+
                     dataFiltrada={dataFiltrada} setDataFiltrada={setDataFiltrada}
+
                     updateDataFiltrada={updateDataFiltrada} setUpdateDataFiltrada={setUpdateDataFiltrada}
+
+                    recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
+
                 />
             </section>
-
-
+            
             {recetasAcordion.length > 0 &&
                 <section className="recetas">
                     <Accordion
@@ -38,7 +40,24 @@ export default function Main({ busquedas, setBusqueda, dataFiltrada, setDataFilt
                 </section>
             }
 
+
         </div>
 
     );
 }
+
+
+/*
+
+ {recetasAcordion.length > 0 &&
+                <section className="recetas">
+                    <Accordion
+                        recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
+
+                    />
+                </section>
+            }
+
+
+
+*/

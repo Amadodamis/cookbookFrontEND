@@ -36,9 +36,9 @@ function Table({ busquedas, recetasAcordion, setRecetasAcordion, dataFiltrada, s
         {
           dataFiltrada.length ?
             (
-              dataFiltrada.map((item, i) => (
+              dataFiltrada.map((receta, i) => (
                 <RecetaTable key={i}
-                  receta={item} i={i}
+                  id={receta._id} nombreReceta={receta.receta} i={i}
                   setUpdateDataFiltrada={setUpdateDataFiltrada}
                   recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
                 />

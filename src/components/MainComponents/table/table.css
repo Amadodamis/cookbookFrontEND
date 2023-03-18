@@ -88,8 +88,8 @@
 }
 
 .activeAccordion{
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 600;
   color: var(--primaryColor);
 }
 

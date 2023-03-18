@@ -1,25 +1,34 @@
-import { useState } from "react"
 import './accordion.css'
+
+import { useState, useEffect } from "react"
+import { getRecipesAcordion } from '../../../JS/acordionFunctions'
 
 import ContentAccordion from "./ContentAccordion"
 import TitleAccordion from "./TitleAccordion"
 
 function Accordion({ recetasAcordion, setRecetasAcordion }) {
 
+
     const [selected, setSelected] = useState(null)
+    const [recetas, setRecetas] = useState([])
+
+    useEffect(() => {
+        getRecipesAcordion(recetasAcordion, recetas, setRecetas)
+    }, [recetasAcordion])
+
+
 
     if (recetasAcordion.length < 1) { return null }
 
     return (
         <div className='accordion' >
 
-            {recetasAcordion.map((receta, i) => (
+            {recetas.map((receta, i) => (
 
                 <div className='item' key={i} >
 
                     <TitleAccordion
                         selected={selected} setSelected={setSelected} i={i}
-                        recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
                         id={receta._id} nombreReceta={receta.receta}
                         tipo={receta.tipo}
                     />
@@ -28,8 +37,7 @@ function Accordion({ recetasAcordion, setRecetasAcordion }) {
 
                         contentI={i} selected={selected}
                         procedimiento={receta.procedimiento} ingredientes={receta.ingredientes}
-                        sector={receta.sector} apto={receta.apto} tipo={receta.apto}
-                        porciones={receta.porciones}
+                        apto={receta.apto} porciones={receta.porciones}
                     />
 
                 </div>
