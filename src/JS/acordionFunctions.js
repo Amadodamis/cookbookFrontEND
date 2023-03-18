@@ -50,10 +50,10 @@ function addDeleteAccordion(recetasAcordion, setRecetasAcordion, id) {
     }
     else {
 
-        if (recetasAcordion.length < 9) {
+        if (recetasAcordion.length <7 ) {
             setRecetasAcordion([...recetasAcordion, id])
         } else {
-            alert("No se pueden agregar mas de 9 recetas al acordion")
+            alert("No se pueden agregar mas de 7 recetas al acordion")
         }
     }
 

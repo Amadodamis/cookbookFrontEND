@@ -29,8 +29,8 @@ function Accordion({ recetasAcordion, setRecetasAcordion }) {
 
                     <TitleAccordion
                         selected={selected} setSelected={setSelected} i={i}
-                        id={receta._id} nombreReceta={receta.receta}
-                        tipo={receta.tipo}
+                        id={receta._id} nombreReceta={receta.receta} tipo={receta.tipo}
+                        recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
                     />
 
                     <ContentAccordion

@@ -1,7 +1,7 @@
 import React from 'react'
 import AccordionIcons from "./AccordionIcons"
 
-function TitleAccordion({ id, nombreReceta, selected, setSelected, i, tipo }) {
+function TitleAccordion({ id, nombreReceta, selected, setSelected, i, tipo, recetasAcordion, setRecetasAcordion }) {
 
 
     const toggle = (i) => {
@@ -15,15 +15,18 @@ function TitleAccordion({ id, nombreReceta, selected, setSelected, i, tipo }) {
     return (
 
         <div className='title-box' >
-            
-            <h2 className="title" onClick={() => toggle(i)} >
-                {nombreReceta}
-            </h2>
+            <div className=''>
 
-            <p>{tipo}</p>
+                <h2 className="title" onClick={() => toggle(i)} >
+                    {nombreReceta}
+                </h2>
+                <p>{tipo}</p>
+            </div>
+
 
             <AccordionIcons
                 id={id}
+                recetasAcordion={recetasAcordion} setRecetasAcordion={setRecetasAcordion}
             />
         </div>
     )
