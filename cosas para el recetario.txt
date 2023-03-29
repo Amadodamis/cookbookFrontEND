@@ -1,9 +1,0 @@
-Cosas para hacer al recetario
-
-buscador de recetas por nombre de receta, por ingredientes,por (entrada,plato principal, postre, pan,vegetariano, vegano, apto celiaco,pasta,masa)
-
-agregar recetas
-
-receta randomize
-
-Ingles/Español
